@@ -1,0 +1,39 @@
+{{#partial "contenido"}}
+	<div id="formularioIndicadorAlta">
+    <h1> Alta de Indicadores </h1>
+
+    <form action="/verificarAltaIndicador" method="post" id="signupForm">
+
+ <div class="fieldContainer">
+
+         <div class="formRow">
+            <div class="label div-with-label-ind">
+                <label for="Nombre">Nombre Indicador:</label>
+            </div>
+           <form action="/action_page.php">
+            <input type="text" name="nombreIndicador"><br>
+        </div>
+        
+        <div class="formRow">
+            <div class="label div-with-label-ind">
+                <label for="Formula">Fórmula:</label>
+            </div>
+           
+            <input type="text" name="formula"><br>
+            <form action="/action_page.php">
+        </div>
+
+           
+    </div> <!-- Closing fieldContainer -->
+
+     <div class="botonConsulta ">
+             <button  type="submit" class="btn btn-primary button-Alta button-border-Alta">Guardar</button>
+       </div>
+    
+    
+   </form>
+        
+</div>
+
+{{/partial}}
+{{>Home.hbs}}

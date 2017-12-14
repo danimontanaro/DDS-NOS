@@ -1,0 +1,51 @@
+{{#partial "contenido"}}
+	<div id="formularioIndicadorModificacion">
+    <h1> Modificación de Indicadores </h1>
+
+    <form action="/modificacionIndicador" method="POST" id="signupForm">
+
+ <div class="fieldContainer">
+
+         <div class="formRow">
+         <div class="label div-with-label-ind">
+                <label for="Indicador">Seleccionar Indicador:</label>
+            </div>
+            <select id="IndicadoresSelect" name="Indicador" class="label styled-select-ind black-ind rounded-ind">
+            <option value="-1" name "indicador">Seleccionar</option>
+            {{#each indicador}}
+            <option value= {{nombre}}> {{nombre}}</option>
+            {{/each}}
+        </select>
+        </div>
+
+        <div class="formRow">
+            <div class="label div-with-label-ind">
+                <label for="Nombre">Nombre:</label>
+            </div>
+           <form action="/action_page.php">
+            <input type="text" name="fname"><br>
+        </div>
+        
+        <div class="formRow">
+            <div class="label div-with-label-ind">
+                <label for="Formula">Fórmula:</label>
+            </div>
+           <form action="/action_page.php">
+            <input type="text" name="fname"><br>
+        </div>
+
+          
+    </div> <!-- Closing fieldContainer -->
+    
+        <div class="botonConsulta ">
+             <button  onclick="obtenerUPDATEindicador()"  type="submit" class="btn btn-primary button-consulta-ind button-border-ind">Guardar</button>
+        <div id="nombre-del-indicador" style="display: none">{{indicador.nombre}}</div>
+        <div id="formula-del-indicador" style="display: none">{{indicador.formula}}</div>
+
+    
+   </form>
+        
+</div>
+
+{{/partial}}
+{{>Home.hbs}}

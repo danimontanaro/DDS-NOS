@@ -1,0 +1,1 @@
+[{"nombre":"Ingreso Neto","formula":"IngresoNetoEnOperacionesContinuas + IngresoNetoEnOperacionesDiscontinuas"},{"nombre":"ROE","formula":"(IngresoNeto - Dividendo) / CapitalTotal"},{"nombre":"ROE2","formula":"IngresoNeto - Dividendo"}]

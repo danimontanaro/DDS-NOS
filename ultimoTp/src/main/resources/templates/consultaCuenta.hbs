@@ -1,0 +1,16 @@
+  {{#partial "contenido"}}
+
+  <ol id="lista3">
+    <li>Empresa {{empresa}}</li>
+    <li>Periodo {{desde}}-{{hasta}}</li>
+    <li>Cuentas
+       <ol>
+           {{#each cuentas}}
+            <option value= {{nombre}}> {{nombre}}</option>
+            <option value= {{valor}} > {{valor}}</option>
+            {{/each}}
+       </ol>
+    </li>
+</ol>
+{{/partial}}
+{{>Home.hbs}} 

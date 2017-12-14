@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+			<title>Pagina de inicio</title>
+			<link href="/css/styleHome.css" rel="stylesheet" type="text/css" media="screen" />
+			<link href="/css/styleConsulta.css" rel="stylesheet" type="text/css" media="screen" />
+			<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+			<link href="/css/styleMetodologia.css" rel="stylesheet" type="text/css" media="screen" />
+			<link href="/css/styleAlta.css" rel="stylesheet" type="text/css" media="screen" />
+			<link href="/css/styleIndicadores.css" rel="stylesheet" type="text/css" media="screen" />
+			<link href="/css/styleTabla.css" rel="stylesheet" type="text/css" media="screen" />
+			<link rel="icon" type="image/png" href="/images/favicon.png" />
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="menu">
+			<ul class="nav">
+			<li class="current_page_item tab-home"><a class="proj-option" href="/Home">Home</a>
+			<ul  class="subnav">
+						<li><a href="/cerrarSesion">Cerrar Sesion</a></li>					
+					</ul>
+			</li>
+			<li class="tab-home"><a class="proj-option" href="#">Cuentas</a>
+					<ul  class="subnav">
+						<li><a href="/cuentas">Consulta</a></li>					
+					</ul>
+			</li>
+			<li class="tab-home"><a class="proj-option" href="#">Indicadores</a>
+					<ul class="subnav">
+						<li><a  href="/indicadorModificacion">Modificar</a></li>
+						<li><a href="/indicadorAlta">Alta</a></li>
+						<li><a href="/indicadorEliminacion">Eliminar</a></li>
+						<li><a href="/indicadorConsulta">Consulta</a></li>
+						<li><a href="">Listado</a>
+							<ul  class="subnav" >
+								<li><a href="">Creados por el Usuario</a></li>
+								<li><a href="">Predefinidos</a></li>
+							</ul>
+						</li>
+					</ul>
+			</li>
+			<li class="tab-home"><a class="proj-option" href="#">Metodologias</a>
+				<ul class="subnav">
+						<li><a href="/metodologiasModificacion">Modificar</a></li>
+						<li><a href="/metodologiasAlta">Alta</a>
+						
+						</li>
+						<li><a href="/metodologiaEliminacion">Eliminar</a></li>
+						<li><a href="">Listado</a>
+							<ul  class="subnav" >
+								<li><a href="">Creados por el Usuario</a></li>
+								<li><a href="">Predefinidos</a></li>
+							</ul>
+						</li>
+						<li><a href="">Consulta</a>
+							<ul  class="subnav" >
+								<li><a href="/metodologiasListaEmpresas">Lista de Empresas Ordenadas</a></li>
+								<li><a href="/metodologias">Empresa Especifica</a></li>
+							</ul>
+						</li>
+					</ul>
+			</li>
+			<li >
+			<a class="CierreSesion" href="/"><img src="/images/boton-de-apagado-24.png"></a>
+			</li>
+		</ul>
+		
+	</div>
+	<!-- FIN  #menu -->
+
+	<div id="header">
+		<div id="logo">
+						
+		</div>
+	</div>
+
+	<!-- end #header -->
+	<div id="contenidoPagina">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+
+					{{#block "contenido"}}
+						{{/block}}
+		
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<h2>Sobre Nosotras</h2>
+					<ul>
+						<li><a href="Integrantes">Integrantes</a></li>
+						
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end #sidebar barra de la derecha -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+</div>
+	<div id="footer">
+		<p><a>UTN- FRBA Catedra Diseño de Sistemas- 2017</a>.</p>
+	</div>
+	<!-- end #footer -->
+</body>
+<script>
+	function obtenerValorDeLaFormular (){
+		var selectElm = document.getElementById('IndicadoresSelect');
+		var seleccionDelSelect=selectElm.options[selectElm.selectedIndex].text;
+		var arrayIndicador = seleccionDelSelect.split(" || ")
+		var formula = arrayIndicador[1]
+		nombreDeLaEmpresa =  document.getElementById("nombre-de-la-empresa").textContent,
+		periodoDesde = document.getElementById("periodo-desde").textContent,
+		periodoHasta = document.getElementById("periodo-hasta").textContent;
+		
+		//formula = formula.replace("/", "%2F").trim();%252F
+		formula = formula.replace("/", "%252F").trim();
+		periodoDesde = periodoDesde.replace("/", "%252F").trim();
+		periodoHasta = periodoHasta.replace("/", "%252F").trim();
+		window.location.href = "/obtenerValorIndicador/" + nombreDeLaEmpresa + "/" + periodoDesde + "/" + periodoHasta + "/" + formula;
+ 		
+	
+    };
+
+	function obtenerUPDATEindicador (){
+		var selectElm = document.getElementById('IndicadoresSelect'),
+			seleccionDelSelect=selectElm.options[selectElm.selectedIndex].text,
+			nombreIndicador =  document.getElementById("nombre-del-indicador").textContent,
+			formulaIndicador = document.getElementById("formula-del-indicador").textContent;
+		
+	}
+
+	
+</script>
+</html>
+<!--
+<script>
+
+	function obtenerValorDeLaFormular (form){
+		
+		var formula = document.getElementById("formula-del-indicador").textContent,
+			nombreDeLaEmpresa =  document.getElementById("nombre-de-la-empresa").textContent,
+			periodoDesde = document.getElementById("periodo-desde").textContent,
+			periodoHasta = document.getElementById("periodo-hasta").textContent;
+		
+		formula = formula.replace("/", "%2F").trim();
+		window.location.href = "/obtenerValorIndicador/" + nombreDeLaEmpresa + "/" + periodoDesde + "/" + periodoHasta + "/" + formula;
+	}
+</script>
+-->
+

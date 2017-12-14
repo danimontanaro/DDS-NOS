@@ -1,0 +1,33 @@
+{{#partial "contenido"}}
+	<div id="formularioMetodologiasEliminacion">
+    <h1> Eliminación de Metodologias </h1>
+
+    <form action="/eliminado" method="get" id="signupForm">
+
+ <div class="fieldContainer">
+
+         <div class="formRow">
+         <div class="label div-with-label">
+                <label for="Metologia">Seleccionar Metodologia:</label>
+            </div>
+            <select name="Metodologia" class="label styled-select black rounded">
+            <option value="-1" name "field">Seleccionar</option>
+            {{#each metodologia}}
+            <option value= {{nombre}}> {{nombre}}</option>
+            {{/each}}
+        </select>
+        </div>
+
+        
+    </div> <!-- Closing fieldContainer -->
+    
+         <div class="botonConsulta ">
+             <button  type="submit" class="btn btn-primary button-consulta button-border">Borrar</button>
+       </div>
+    
+   </form>
+        
+</div>
+
+{{/partial}}
+{{>Home.hbs}}

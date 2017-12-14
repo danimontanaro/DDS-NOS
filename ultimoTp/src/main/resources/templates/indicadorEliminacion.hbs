@@ -1,0 +1,33 @@
+{{#partial "contenido"}}
+	<div id="formularioIndicadorEliminacion">
+    <h1> Eliminación de Indicadores </h1>
+
+    <form action="/indicadorEliminar" method="post" id="signupForm">
+
+ <div class="fieldContainer">
+
+         <div class="formRow">
+         <div class="label div-with-label-ind">
+                <label for="Indicador">Seleccionar Indicador:</label>
+            </div>
+            <select name="Indicador" class="label styled-select-ind black-ind rounded-ind">
+            <option value="-1" name "field">Seleccionar</option>
+            {{#each indicadores}}
+            <option value= "{{nombre}}"> {{nombre}}</option>
+            {{/each}}
+        </select>
+        </div>
+
+        
+    </div> <!-- Closing fieldContainer -->
+    
+         <div class="botonConsulta ">
+             <button  type="submit" class="btn btn-primary button-consulta-ind button-border-ind">Borrar</button>
+       </div>
+    
+   </form>
+        
+</div>
+
+{{/partial}}
+{{>Home.hbs}}

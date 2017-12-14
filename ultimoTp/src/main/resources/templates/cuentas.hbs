@@ -1,0 +1,57 @@
+{{#partial "contenido"}}
+    <div id="formularioConsulta">
+    <h1>Consulta de Cuentas</h1>
+
+    
+
+    <div class="fieldContainer">
+    <form role="form" action="/consultaCuenta" method="POST">
+
+        <div class="formRow">
+            <div class="label div-with-label">
+                <label for="nombreEmpresa">Empresa:</label>
+            </div>
+            <select name="empresa" class="label styled-select black rounded">
+            <option value="-1" name "field">Seleccionar</option>
+            {{#each empresas}}
+            <option value= '{{nombre}}''> {{nombre}}</option>
+            {{/each}}
+        </select>
+        </div>
+        
+        <div class="formRow">
+            <div class="label div-with-label">
+                <label for="periodoDesde">Periodo Desde:</label>              
+            </div>
+            <select name="periodoDesde" class="label styled-select black rounded">
+                <option value="-1" name "field">Seleccionar</option>
+                    {{#each periodosDesde}}
+                <option value= {{desde}}> {{desde}}</option>
+                    {{/each}}
+             </select>
+        </div>
+        
+        <div class="formRow">
+            <div class="label div-with-label">
+                <label for="periodoHasta">Periodo Hasta:</label>
+            </div>
+            
+            <select name="periodoHasta" class="label styled-select black rounded">
+                <option value="-1" name "field">Seleccionar</option>
+                {{#each periodosHasta}}
+                 <option value= {{hasta}}> {{hasta}}</option>
+                {{/each}}
+             </select>
+        </div>
+        
+        </div> <!-- Closing fieldContainer -->
+    
+         <div class="botonConsulta">
+          <button  type="submit" class="btn btn-primary button-consulta button-border">Consultar</button>
+       </div>
+ </form>
+        
+</div>
+
+{{/partial}}
+{{>Home.hbs}}

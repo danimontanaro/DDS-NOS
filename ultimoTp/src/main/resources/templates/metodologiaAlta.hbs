@@ -1,0 +1,39 @@
+{{#partial "contenido"}}
+	<div id="formularioMetodologiasAlta">
+    <h1> Alta de Metodologias </h1>
+
+    <form action="/altaMetodologia" method="post" id="signupForm">
+
+ <div class="fieldContainer">
+
+         <div class="formRow">
+            <div class="label div-with-label-ind">
+                <label for="Nombre">Nombre Metodologia:</label>
+            </div>
+           <form action="/action_page.php">
+            <input type="text" name="nombreMetodologia"><br>
+        </div>
+        
+        <div class="formRow">
+            <div class="label div-with-label-ind">
+                <label for="Condicion">Condición:</label>
+            </div>
+           
+            <input type="text" name="condicion"><br>
+            <form action="/action_page.php">
+        </div>
+
+           
+    </div> <!-- Closing fieldContainer -->
+
+     <div class="botonConsulta ">
+             <button  type="submit" class="btn btn-primary button-consulta button-border">Guardar</button>
+       </div>
+    
+    
+   </form>
+        
+</div>
+
+{{/partial}}
+{{>Home.hbs}}

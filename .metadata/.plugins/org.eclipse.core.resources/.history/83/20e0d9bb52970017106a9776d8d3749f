@@ -1,0 +1,99 @@
+package Vista;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Color;
+import javax.swing.JComboBox;
+
+public class UIDeleteIndicadores extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			UIDeleteIndicadores dialog = new UIDeleteIndicadores();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public UIDeleteIndicadores() {
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setLayout(null);
+		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		panel.setBounds(0, 0, 434, 228);
+		contentPanel.add(panel);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBorder(new EmptyBorder(5, 5, 5, 5));
+		panel_1.setBounds(0, 0, 446, 40);
+		panel.add(panel_1);
+		panel_1.setLayout(new FlowLayout());
+		
+		JLabel lblSeleccioneElIndicador = new JLabel("Seleccione el Indicador que desea eliminar :");
+		lblSeleccioneElIndicador.setForeground(Color.PINK);
+		lblSeleccioneElIndicador.setFont(new Font("Tahoma", Font.BOLD, 16));
+		panel_1.add(lblSeleccioneElIndicador);
+		
+		JLabel lblIndicador = new JLabel("Indicador:");
+		lblIndicador.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblIndicador.setBounds(24, 77, 124, 20);
+		panel.add(lblIndicador);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		comboBox.setBounds(192, 79, 116, 20);
+		panel.add(comboBox);
+		
+		JButton button = new JButton("Borrar");
+		button.setForeground(Color.BLACK);
+		button.setFont(new Font("Tahoma", Font.BOLD, 14));
+		button.setBounds(142, 183, 106, 23);
+		panel.add(button);
+		
+		JLabel label_2 = new JLabel(" ");
+		label_2.setForeground(new Color(139, 0, 0));
+		label_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		label_2.setBounds(10, 108, 414, 62);
+		panel.add(label_2);
+		{
+			JPanel buttonPane = new JPanel();
+			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
+			getContentPane().add(buttonPane, BorderLayout.SOUTH);
+			{
+				JButton cancelButton = new JButton("Cancel");
+				cancelButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setVisible(false); // lo ocultas
+						dispose(); // lo destruis
+					}
+				});
+				cancelButton.setActionCommand("Cancel");
+				buttonPane.add(cancelButton);
+			}
+		}
+	}
+}

@@ -1,0 +1,582 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #3b4148 ;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ea4c88;
+	/*color: #787878;*/
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	color: #ea4c88;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 2.4em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 180%;
+	color: #000000;
+}
+
+ul, ol {
+}
+
+a {
+	text-decoration: none;
+	color: #ea85c5;
+	/*ROSITA CLARO*/
+}
+
+a:hover {
+}
+/*plantilla mayor*/
+#wrapper {
+	width: 980px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+/* Header */
+
+#header {
+	width: 970px;
+	height: 270px;
+	margin: 0 auto;
+	padding: 0px;
+	background: url(/images/img06.gif) no-repeat left top;
+}
+
+/* Logo del sistema de inversiones */
+
+#logo {
+	float: right;
+	margin: 0;
+	padding: 0;
+	color: #000000;
+}
+
+#logo h1, #logo p {
+	margin: 0;
+	padding: 0;
+}
+
+#logo h1 {
+	float: left;
+	padding-top: 223px;
+	letter-spacing: -1px;
+	text-align: right;
+	text-transform: lowercase;
+	font-size: 3.8em;
+}
+
+#logo p {
+	float: left;
+	margin: 0;
+	padding: 250px 0 0 10px;
+	font: normal 14px Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	color: #FFFFFF;
+} 
+
+#logo a {
+	border: none;
+	background: none;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+
+
+/* Menu */
+
+#menu {
+	width: 980px;
+	height: 42px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+}
+
+/*#menu li {
+	float: left;
+
+}
+*/
+#menu a {
+	display: block;
+	width: 140px;
+	height: 30px;
+	margin-right: 1px;
+	padding: 9px 0px 0px 0px;
+	/*background: url(img/img02.gif) no-repeat left top;*/
+	text-decoration: none;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	border: none;
+	/*borde de la palabra*/
+	    -moz-box-shadow:0 0 20px #292929 inset;
+       -webkit-box-shadow:0 0 20px #292929 inset;
+        box-shadow:0 0 20px #292929 inset;
+        text-decoration: underline;
+	color: #FFFFFF;
+}
+
+
+#menu .current_page_item a {
+
+	padding-left: 0;
+}
+
+/* Page */
+
+#contenidoPagina {
+	width: 940px;
+	margin: 0 auto;
+	padding: 0px 0px 0px 40px;
+	background: url(/images/img03.gif) repeat-y left top;
+}
+
+#page-bgtop {
+	padding: 20px 0px;
+}
+
+#page-bgbtm {
+}
+
+/* CONTENIDO DE LA PAGINA */
+
+#content {
+	float: left;
+	width: 580px;
+	padding: 30px 0px 0px 0px;
+}
+
+
+.post-bgtop {
+}
+
+.post-bgbtm {
+}
+
+.post .title {
+	height: 38px;
+	margin-bottom: 10px;
+	padding: 12px 0 0 0px;
+	letter-spacing: -.5px;
+
+}
+
+.post .title a {
+	color: #ea4c88;
+	border: none;
+}
+
+.post .meta {
+	margin-bottom: 30px;
+	padding: 5px 0px 15px 0px;
+	text-align: left;
+	font-family: 'Raleway', sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.post .meta .date {
+	float: left;
+}
+
+.post .meta .posted {
+	float: right;
+}
+
+.post .meta a {
+}
+
+.links {
+	padding-top: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: Verdana;
+
+}
+.CierreSesion {
+	margin-left: 273px!important;
+}
+
+/* BARRA DE LA DERECHA  */
+
+#sidebar {
+	float: right;
+	width: 280px;
+	margin: 0px;
+	padding: 0px 20px 0px 0px;
+	color: #787878;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar li {
+	margin: 0;
+	padding: 0;
+}
+
+#sidebar li ul {
+	margin: 0px 0px;
+	padding-bottom: 30px;
+}
+
+#sidebar li li {
+	line-height: 35px;
+	border-bottom: 1px dashed #D1D1D1;
+	margin: 0px 30px;
+	border-left: none;
+}
+
+#sidebar li li span {
+	display: block;
+	margin-top: -20px;
+	padding: 0;
+	font-size: 11px;
+	font-family: 'Raleway', sans-serif;
+}
+
+#sidebar h2 {
+	height: 38px;
+	padding-left: 30px;
+	letter-spacing: -.5px;
+	font-size: 1.8em;
+}
+
+#sidebar p {
+	margin: 0 0px;
+	padding: 0px 30px 20px 30px;
+	text-align: justify;
+}
+
+#sidebar a {
+	border: none;
+}
+
+#sidebar a:hover {
+	text-decoration: underline;
+	color: #8A8A8A;
+}
+
+
+
+/* PIE DE PAGINA  */
+
+#footer {
+	height: 50px;
+	margin: 0 auto;
+	padding: 0px 0 15px 0;
+	background: #ECECEC;
+	border-top: 1px solid #DEDEDE;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer p {
+	margin: 0;
+	padding-top: 20px;
+	line-height: normal;
+	font-size: 9px;
+	text-transform: uppercase;
+	text-align: center;
+	color: black;
+}
+
+#footer a {
+	color:black;
+}
+.nav > li {
+		float:left;
+}
+.nav li ul {
+display:none;
+position:absolute;
+min-width:140px;
+}
+.nav li:hover > ul {
+display:block;
+}
+
+.nav li ul li ul {
+right:-140px;
+top:0px;
+}
+
+.nav {
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+}			
+.subnav li a {
+background-color:#000;
+color:#fff;
+text-decoration:none;
+padding:10px 12px;
+display:block;
+}
+		
+.subnav li a:hover {
+	display:block;
+	background-color:#434343;
+}		
+			
+			
+	
+.subnav li ul li {
+	position:relative;
+	top:120px;
+	}
+			
+
+/*CONSULTA DE CUENTAS*/
+
+#formularioConsulta{
+
+    background-color:#1C1C1C;
+    border:1px solid #ea4c88;
+    margin:20px auto;
+    padding:20px;
+    width:500px;
+    
+    -moz-box-shadow:0 0 1px #444 inset;
+    -webkit-box-shadow:0 0 1px #444 inset;
+    box-shadow:0 0 1px #444 inset;
+}
+
+#formularioConsulta h1{
+    
+    font-family: 'Raleway', sans-serif;
+    font-size:40px;
+    font-weight:normal;
+    padding:0 0 30px 10px;
+    text-align:left;
+     background-color:#1C1C1C;
+}
+
+.fieldContainer{
+   
+    background-color:#1E1E1E;
+    border:1px solid #ea4c88;
+    padding:30px 10px;
+
+    -moz-box-shadow:0 0 20px #292929 inset;
+    -webkit-box-shadow:0 0 20px #292929 inset;
+    box-shadow:0 0 20px #292929 inset;
+
+}
+
+#formularioConsulta,.fieldContainer,.errorTip{
+  
+    -moz-border-radius:12px;
+    -webkit-border-radius:12px;
+    border-radius:12px;
+
+
+}
+
+
+.formRow{
+    height:35px;
+    padding:10px;
+    position:relative;
+
+}
+
+.label{
+
+    float:left;
+    padding:0 10px 0 0;
+    text-align:right;
+}
+
+label{
+
+     font-family: 'Raleway', sans-serif;
+    font-size:11px;
+    letter-spacing:1px;
+    line-height:0px;
+}
+
+.field{
+    float:left;
+}
+
+.field input{
+
+    border:1px solid white;
+    color:#666666;
+    font-family: 'Raleway', sans-serif;
+    font-size:22px;
+    padding:4px 5px;
+   
+    outline:none; 
+}
+
+.botonConsulta{
+    
+    text-align:center;
+    padding:30px 0 10px;
+}
+
+#Consulta{
+ 
+    border:1px solid #f4f4f4;
+    cursor:pointer;
+    height:40px;
+    text-indent:-9999px;
+    text-transform:uppercase;
+    width:110px;
+    
+   
+    font-family: 'Raleway', sans-serif;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+}
+
+
+
+#Consulta:hover{
+    background-color:#dcf2ff;
+    border:1px solid white;
+}
+
+input:hover,
+input:focus{
+    -moz-box-shadow:0 0 8px lightblue;
+    -webkit-box-shadow:0 0 8px lightblue;
+    box-shadow:0 0 8px lightblue;
+}
+
+.errorTip{
+   
+    background-color:#970F08;
+    color:white;
+    font-size:10px;
+    height:26px;
+    letter-spacing:0.4px;
+    margin-left:20px;
+    padding:5px 0 5px 10px;
+    position:absolute;
+    text-shadow:1px 1px 0 #555555;
+    width:200px;
+    right:-130px;
+}
+
+
+
+#footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    padding:10px;
+    color:#eee;
+    text-align:center;
+    font-weight:normal;
+    font-style:italic;
+}
+
+a, a:visited {
+    color:#0196e3;
+    text-decoration:none;
+    outline:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+a img{
+    border:none;
+}
+/*fin consulta cuenta
+*/
+
+#popup {
+   background-color: rgba(0,0,0,0.8);
+   position: fixed;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+   margin:0;
+   /* Animación que durará 2 segundos*/
+   animation:autopopup 2s;
+}
+keyframes autopopup {
+   from {opacity: 0;margin-top:-200px;}
+   to {opacity: 1;}
+}
+#popup:target {
+   visibility:visible;
+   opacity: 1;
+   background-color: rgba(0,0,0,0.8);
+   position: fixed;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+   margin:0;
+   z-index: 999;
+   transition:all 1s;
+}
+.popup-contenedor {
+   position: relative;
+   margin:7% auto;
+   padding:30px 50px;
+   font-size: 16px;
+   background-color: rgba(115, 101, 125, 0.77);
+   color:#333;
+   border-radius: 3px;
+   width:50%;
+}
+a.popup-cerrar {
+   position: absolute;
+   top:3px;
+   right:3px;
+   background-color: #333;
+   padding:7px 10px;
+   
+   text-decoration: none;
+   line-height: 1;
+   color:#fff;
+}
+.errorLogueo
+{
+  font-size: 20px;
+  font: normal 14px Georgia, "Times New Roman", Times, serif;
+  color:pink;
+}

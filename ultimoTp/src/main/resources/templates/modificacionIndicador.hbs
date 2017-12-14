@@ -1,0 +1,42 @@
+{{#partial "contenido"}}
+
+
+<body>
+  <h2>NombreIndicador: {{indicador.nombre}}</h2>
+  <h2>FormulaIndicador: {{indicador.formula}}</h2>
+      
+      <div class="formRow">
+         <div class="label div-with-label-ind">
+                <label for="Indicador">Seleccionar Indicador:</label>
+            </div>
+            <select  name="Indicador" class="label styled-select-ind black-ind rounded-ind">
+            <option value="-1" name "field">Seleccionar</option>
+           {{#each indicadores}}
+            <option value= "{{nombre}}"> {{nombre}}</option>
+            {{/each}}
+        </select>
+        </div>
+
+        <div class="formRow">
+            <div class="label div-with-label-ind">
+                <label for="Nombre">Nombre:</label>
+            </div>
+           <form action="/action_page.php">
+            <input type="text" name="nombre"><br>
+        </div>
+        
+        <div class="formRow">
+            <div class="label div-with-label-ind">
+                <label for="Formula">Fórmula:</label>
+            </div>
+           <form action="/action_page.php">
+            <input type="text" name="formula"><br>
+        </div>
+
+      <div class="botonConsulta ">
+             <button  onclick="obtenerUPDATEindicador()"  type="submit" class="btn btn-primary button-consulta-ind button-border-ind">Guardar</button>
+        <div id="nombre-del-indicador" style="display: none">{{indicador.nombre}}</div>
+        <div id="formula-del-indicador" style="display: none">{{indicador.formula}}</div>
+ </tbody>
+      
+{{/partial}} {{>Home.hbs}}

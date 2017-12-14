@@ -1,0 +1,103 @@
+/**
+ * JavaCC template file created by SF JavaCC plugin 1.5.28+ wizard for JavaCC 1.5.0+
+ */PARSER_BEGIN(GrammarCondiciones)package parserCondiciones;
+
+public class GrammarCondiciones
+{ }
+    
+PARSER_END(GrammarCondiciones)
+
+SKIP :
+{
+  " "
+| "\r"
+| "\t"
+| "\n"
+}
+
+TOKEN : /* OPERATORS */
+{
+  < MAYOR : " mayor" >
+| < MENOR : " menor " >
+| < IGUAL : " igual" >
+| < MINUS : "-">
+}
+
+TOKEN :
+{
+  < EXPRESION : (<VARIABLE>)+  >
+| 
+  < VARIABLE : <LETTER> (< LETTER >|< DIGIT >)*  >
+|
+  < NUM : (< DIGIT>)+>
+| 
+  < LEFT_PAREN : "(" >
+|
+  < RIGHT_PAREN : ")" >
+  
+}
+
+TOKEN :
+{
+  <#DIGIT: ["0"-"9"]>
+| <#LETTER: ["a"-"z", "A"-"Z"]>
+}
+
+int start() :
+{}
+{
+  expresion()   // "well formed formula"  
+  {
+    return 0;  // returns 0 on successful parse
+  }
+}
+
+  
+void expresion() :
+{}
+{
+  term() (relational_operator()   numero())*
+}
+
+void term() :
+{}
+{
+  symbol()  
+|
+  < LEFT_PAREN > expresion() < RIGHT_PAREN >
+   
+}
+
+
+void numero() :
+{}
+{
+  <NUM>
+|
+  <MINUS> numero() //Unary minus
+}
+
+void relational_operator() :
+{}
+{
+  < MAYOR >
+| < MENOR >  
+| < IGUAL >
+| < MINUS>// binary minus
+
+}
+  
+
+void symbol() :
+{Token t;
+}
+{
+  t= < EXPRESION >
+  {
+    // Not necessary for parser construction - debugging code
+    System.out.println("matched identificador: "+t);
+  }
+| 
+  t= < VARIABLE >  {System.out.println("matched variable: "+t);}
+  
+}

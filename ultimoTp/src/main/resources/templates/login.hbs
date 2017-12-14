@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+	<meta charset="utf-8">
+
+	<title>Inicio de Sesión</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Linkeo con el CSS!!-->
+    <link rel="stylesheet" href="/css/login.css">
+   
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+  </head>
+<body>
+	<img src="/images/Sistema.PNG" width="200" height="200"/>
+    <div id="login"> <!--Inicio del Logueo-->
+        
+        <form role="form" action="/Home" method="POST">      
+                <p><span class="fontawesome-user"></span><input name="Usuario" type="text" value="Usuario" onBlur="if(this.value == '') this.value = 'Usuario'" onFocus="if(this.value == 'Usuario') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+                <p><span class="fontawesome-lock"></span><input name="Password" type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                <p><input name="IniciarSesion" type="submit" value="Iniciar Sesion"></p>
+
+
+        </form>
+        
+        <!--<p>No está registrado? <a id="registrarse" href="https://form.jotformz.com/72456816517665">Registrarse</a><span class="fontawesome-arrow-right"></span></p>-->
+
+    </div> <!--fin del logueo -->
+ {{#block "contenido"}}
+            {{/block}}
+
+ <!--<div class="connect"> 
+ Inicio Logueo con Redes Sociales
+     <p>Iniciar Sesión con:</p>
+        <p>
+          <a class="facebook" href=""></a>
+          <a class="twitter" href=""></a>
+        </p>
+ </div>  FIN logueo con Redes Sociales 
+-->
+ <footer class ="pieDePag"><!--Pie de Pagina para poner imagen de la UTN-->
+     <div>
+         Diseño de Sistemas- UTN-FRBA
+     </div>
+ </footer>
+</body>
+</html>

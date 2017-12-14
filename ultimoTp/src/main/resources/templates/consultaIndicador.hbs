@@ -1,0 +1,46 @@
+{{#partial "contenido"}}
+
+
+<body>
+  <h2>Empresa: {{empresa.nombre}}</h2>
+  <h2>Periodo: {{periodoDesde}} -{{periodoHasta}}</h2>
+<!-- 
+  <table class="container">
+    <thead>
+      <tr>
+        <th>
+          <h1>Indicadores</h1>
+        </th>
+        <th>
+          <h1>Formula</h1>
+        </th>
+        <th>
+          <h1>Obtener Valor</h1>
+        </th>
+      </tr>
+      </thead>
+      </table>
+      -->
+      
+       <div class="formRow">
+            <div class="label div-with-label">
+                <label for="indicador"> Nombre Indicador  || Formula :</label>
+              
+            </div>
+            <select id="IndicadoresSelect" name="indicador" class="label styled-select black rounded">
+            <option value="-1" name "field">Seleccionar</option>
+            {{#each indicadores}} 
+                <option value="audi">{{nombre}} || {{formula}} </option>
+            {{/each}}
+             </select>
+        </div>
+      <div class="botonObtenerValor">
+          <button onclick="obtenerValorDeLaFormular()" type="submit" class="btn btn-primary button-consulta button-border">Obtener Valor</button>
+      </div>
+      <!-- <button onclick="obtenerValorDeLaFormular()">Obtener Valor</button> -->
+      <div id="nombre-de-la-empresa" style="display: none">{{empresa.nombre}}</div>
+      <div id="periodo-desde" style="display: none">{{periodoDesde}}</div>
+      <div id="periodo-hasta" style="display: none">{{periodoHasta}}</div>
+ </tbody>
+      
+{{/partial}} {{>Home.hbs}}
